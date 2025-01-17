@@ -1,0 +1,151 @@
+/* Importing the SF Pro Display font */
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('https://fonts.apple.com/fonts/otf/SFProDisplay/SF-Pro-Display-Bold.otf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: 'SF Pro Display', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Styling the main menu */
+ul.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+ul.menu li {
+  position: relative;
+  padding: 15px 25px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 16px;
+  color: black;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+/* Hover effect for main menu */
+ul.menu li:hover {
+  color: red;
+}
+
+/* Active tab styling */
+ul.menu li.active {
+  color: red;
+}
+
+/* Styling for Home menu item with icon */
+.menu-item-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.menu-item-home i {
+  font-size: 24px;
+}
+
+/* Styling the submenu (full-width background) */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  width: 200vw; /* Full width of the viewport */
+  left: 50%; /* Align submenu to the center of the viewport */
+  transform: translateX(-50%); /* Centering the submenu */
+}
+
+.submenu li {
+  position: relative;
+}
+
+.submenu li {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  color: black;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.submenu li img {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.submenu li:hover {
+  color: red;
+}
+
+/* Display submenu when hovering over a menu item */
+ul.menu li:hover .submenu {
+  display: block;
+}
+
+/* Custom styling for the submenu items with provider layout */
+.custom-menu-background {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+}
+
+.provider-submenu-container {
+  flex: 1 1 20%;
+  max-width: 150px;
+  text-align: center;
+  position: relative;
+}
+
+.submenu-icon {
+  display: block;
+  color: black;
+  text-decoration: none;
+  position: relative;
+}
+
+.submenu-text {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.float-dot-nav {
+  position: absolute;
+  font-size: 0.08rem;
+  padding: 0.03rem 0;
+  color: #fff;
+  border-radius: 0.04rem;
+  top: 0.1rem;
+  right: 0.35rem;
+  width: 0.25rem;
+  height: unset;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: red;
+}
